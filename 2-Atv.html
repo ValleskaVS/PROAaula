@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade de casa</title>
+  </head>
+  <body>
+    <script>
+      //1 Atividade da calculadora
+      function calculadora() {
+        //Pede as entradas ao usuário
+        let num1 = parseFloat(prompt("Digite o primeiro número:"));
+        let num2 = parseFloat(prompt("Digite o segundo número:"));
+        let operacao = prompt(
+          "Escolha a operação: \n+ (adição)\n- (subtração)\n* (multiplicação)\n/ (divisão)"
+        ).trim();
+
+        // Variável para armazenar o resultado da operação
+        let resultado;
+
+        // Usa um switch para escolher a operação com base no símbolo inserido
+        switch (operacao) {
+          case "+":
+            resultado = num1 + num2; // Adiciona os números
+            break;
+          case "-":
+            resultado = num1 - num2; // Subtrai o segundo número do primeiro
+            break;
+          case "*":
+            resultado = num1 * num2; // Multiplica os números
+            break;
+          case "/":
+            if (num2 !== 0) {
+              resultado = num1 / num2; // Divide o primeiro número pelo segundo, se o segundo não for zero
+            } else {
+              alert("Divisão por zero não é permitida!"); // Verifica se a divisão é válida
+              return; // Sai da função se a divisão for inválida
+            }
+            break;
+          default:
+            // Se o símbolo da operação não for reconhecido, exibe uma mensagem de erro
+            alert("Operação inválida! Escolha +, -, *, ou /.");
+            return; // Sai da função se a operação for inválida
+        }
+
+        // Exibe o resultado da operação para o usuário
+        alert("O resultado é: " + resultado);
+      }
+
+      // Chama a função calculadora para iniciar
+      calculadora();
+
+      //2 Atividade dos numeros primos
+      function numPrimo() {
+        // Pede ao usuário uma entrada
+        let numero = parseInt(
+          prompt("Digite um número para verificar se é primo:")
+        );
+
+        // Se o número for menor que 2, não é primo
+        if (numero < 2) {
+          alert(numero + " não é um número primo.");
+          return; // Sai da função
+        }
+
+        // Verifica se o número é divisível por qualquer número entre 2 e a raiz quadrada dele
+        for (let i = 2; i <= Math.sqrt(numero); i++) {
+          if (numero % i === 0) {
+            alert(numero + " não é um número primo.");
+            return; // Sai da função se o número não for primo
+          }
+        }
+
+        // Se o número não for divisível por nenhum dos números testados, ele é primo
+        alert(numero + " é um número primo.");
+      }
+
+      // Chama a função para verificar se o número é primo
+      numPrimo();
+
+      //3 Atividade dos caracteres
+      function contar() {
+        // Pede ao usuário para digitar uma string
+        let texto = prompt("Digite quantas string quiser:");
+
+        // Define quais caracteres são considerados especiais
+        let caracteresEspeciais = /[@#$&]/g;
+
+        // Encontra todos os caracteres especiais na string
+        let resultado = texto.match(caracteresEspeciais);
+
+        // Conta quantos caracteres especiais foram encontrados
+        let quantidade = resultado ? resultado.length : 0;
+        // Mostra o número de caracteres especiais encontrados
+        alert("Número de caracteres especiais: " + quantidade);
+      }
+
+      // Chama a função para contar caracteres especiais
+      contar();
+
+      //4 Atividade das média/notas
+      function calcularNotas() {
+        // Pede ao usuário 4 entrada
+        let nota1 = parseFloat(prompt("Digite a nota da primeira prova:"));
+        let nota2 = parseFloat(prompt("Digite a nota da segunda prova:"));
+        let nota3 = parseFloat(prompt("Digite a nota da terceira prova:"));
+        let nota4 = parseFloat(prompt("Digite a nota da quarta prova:"));
+
+        // Calcula a média das notas
+        let media = (nota1 + nota2 + nota3 + nota4) / 4;
+
+        // Verifica a situação do aluno com base na média
+        if (media >= 7) {
+          alert("Aluno aprovado com média: " + media); // Aprovado se a média for 7 ou mais
+        } else if (media >= 5) {
+          alert("Aluno em recuperação com média: " + media); // Em recuperação se a média estiver entre 5 e 7
+        } else {
+          alert("Aluno reprovado com média: " + media); // Reprovado se a média for abaixo de 5
+        }
+      }
+
+      // Chama a função para calcular a média e determinar a situação
+      calcularNotas();
+
+      //5 Atividade do joguinho
+      function adivinhacao() {
+        // Gera um número aleatório entre 1 e 100
+        let numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+        let tentativa;
+        let tentativas = 0;
+
+        // Loop até o usuário adivinhar o número
+        do {
+          // Pede ao usuário para adivinhar o número
+          tentativa = parseInt(prompt("Adivinhe o número (entre 1 e 100):"));
+          tentativas++; // Conta o número de tentativas
+
+          // Dá uma dica se o número é maior ou menor que a tentativa
+          if (tentativa > numeroAleatorio) {
+            alert("O número é menor."); // Dica se o número é menor
+          } else if (tentativa < numeroAleatorio) {
+            alert("O número é maior."); // Dica se o número é maior
+          } else {
+            // Se a tentativa estiver correta, mostra uma mensagem de sucesso
+            alert(
+              "Parabéns! Você adivinhou o número em " +
+                tentativas +
+                " tentativas."
+            );
+          }
+        } while (tentativa !== numeroAleatorio); // Continua o loop até o número ser adivinhado
+      }
+
+      // Chama a função para iniciar o jogo de adivinhação
+      adivinhacao();
+    </script>
+  </body>
+</html>
