@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Banco Star Wars</title>
+  <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="Banco.css" />
+</head>
+
+<body>
+  <header>
+    <img src="/jedi.png" alt="logo" />
+    <p>Bem-vindo ao Banco da Força!</p>
+  </header>
+  <main>
+    <div class="container">
+      <p class="textmenor">Que a força esteja com você !</p>
+      <form action="#" method="post" onsubmit="event.preventDefault(); iniciarSistema();">
+        <label for="usuario"></label>
+        <input type="text" name="usuario" id="usuarioo" placeholder="Digite seu nome" />
+        <label for="senha"></label>
+        <input type="password" name="senha" id="senhaa" placeholder="Digite sua senha" />
+        <button type="button" onclick="iniciarSistema()">Entrar</button>
+      </form>
+    </div>
+    <div class="textos-principais">
+      <p class="textmaior">
+        No vasto universo financeiro, somos seu<br />
+        aliado para explorar novas oportunidades.<br />
+        Aqui, sua jornada é guiada com segurança e<br />
+        clareza, seja você um jovem padawan ou um <br />Jedi experiente.
+      </p>
+      <p class="textmedio">
+        Descubra soluções personalizadas e um atendimento excepcional. No
+        Banco da Força,<br />
+        você encontra mais do que um banco—encontrará um parceiro dedicado ao
+        seu sucesso.
+      </p>
+    </div>
+  </main>
+
+  <script src="Banco.js"></script>
+</body>
+
+</html>

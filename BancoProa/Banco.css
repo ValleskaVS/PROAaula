@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Star+Wars:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #f8f9fa;
+  background: url(/mds.avif) no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  color: #000000;
+  padding: 10px;
+  font-family: "Star Wars", sans-serif;
+  display: flex;
+}
+
+header img {
+  width: 60px;
+  height: 50px;
+  margin-left: 50px;
+}
+
+header p {
+  margin-top: 13px;
+  font-size: 20px;
+  padding-left: 29px;
+  text-shadow: 1px 1px 0 #fde400, -1px -1px 0 #fde400, 1px -1px 0 #fde400,
+    -1px 1px 0 #fde400;
+  text-transform: uppercase;
+}
+
+.container {
+  width: 360px;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  padding: 20px;
+  border: 2px solid #feda1c;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6),
+    0 0 25px rgba(255, 255, 255, 0.4);
+  position: absolute;
+  top: 130px;
+  left: 55%;
+  transform: translateX(50%);
+  font-family: "Star Wars", sans-serif;
+  backdrop-filter: blur(8px);
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.container label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.container input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 2px solid #feda1c;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #f8f9fa;
+}
+
+.container button {
+  background-color: #000000;
+  color: #f8f9fa;
+  text-shadow: 0 0 8px #feda1c, 0 0 16px #feda1c;
+  border: 2px solid #feda1c;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  font-family: "Star Wars", sans-serif;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.container button:hover {
+  background-color: #1e1e1e;
+  border-color: #feda1c;
+}
+
+.textmenor {
+  font-size: medium;
+  color: #000000;
+  text-shadow: 1px 1px 0 #fde400, -1px -1px 0 #fde400, 1px -1px 0 #fde400,
+    -1px 1px 0 #fde400;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.textos-principais {
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 110px;
+}
+
+.textmaior {
+  color: #ffffff;
+  font-size: 29px;
+  font-family: "Star Wars", sans-serif;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #fe1c1c, 0 0 20px #fe1c1c,
+    0 0 30px #fe1c1c, 0 0 40px #feda1c, 0 0 50px #fe1c1c, 0 0 60px #fe231c;
+  background: linear-gradient(to right, #ff0800, #d11515);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding: 5px;
+}
+
+.textmedio {
+  color: #ffffff;
+  font-size: 18px;
+  margin-top: 27px;
+  font-family: "Star Wars", sans-serif;
+  text-shadow: 0 0 5px #1c20fe, 0 0 10px #1c2bfe,
+    0 0 15px #feda1c;
+  background: linear-gradient(to right, #00bfff, #1e90ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
